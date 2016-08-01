@@ -20,4 +20,3 @@ def create_neural_network(input_var, input_shape, output_nodes, inner_transfer_f
 
     return out
 
-

@@ -40,7 +40,7 @@ def train_double_barreled_network(x_input, y_input, num_epochs=100):
 
     u, u_shape, v, v_shape, x_network, y_network = double_barreled_network(x_input, y_input)
 
-    cost = functions.minus_cor(u, v)
+    cost = functions.minus_corr(u, v)
     x_params = lasagne.layers.get_all_params(x_network)
     y_params = lasagne.layers.get_all_params(y_network)
     x_y_params = x_params + y_params
@@ -58,8 +58,8 @@ def train_double_barreled_network(x_input, y_input, num_epochs=100):
         train_batches = 0
         start_time = time.time()
         for batch in iterate_minibatches(x_train, y_train, 100, shuffle=True):
-            inputs, targets = batch
-            train_err += train_fn(inputs, targets)
+            x, u, y, v = batch
+            train_err += train_fn(u, v)
             train_batches += 1
 
         # Then we print the results for this epoch:
@@ -101,6 +101,5 @@ if __name__ == '__main__':
     v_output = T.tensor3('u_output')
 
     train_double_barreled_network(x_input, y_input)
-
 
 
