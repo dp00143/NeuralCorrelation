@@ -3,44 +3,19 @@ import theano
 import theano.tensor as T
 import time
 
-from networks import create_neural_network
+from networks import double_barreled_network, outer_network
 import functions
 
 from data_generator import iterate_minibatches, generate_dataset
 
 import lasagne
 
-def double_barreled_network(x_input, y_input):
 
-    input_shape = (None, 1, 3)
-
-    #Create double barreled neural network
-    x_network = create_neural_network(x_input, input_shape=input_shape, output_nodes=1,
-                                      inner_transfer_function=lasagne.nonlinearities.tanh,
-                                      outer_transfer_function=lasagne.nonlinearities.linear)
-
-
-    y_network = create_neural_network(y_input, input_shape=input_shape, output_nodes=1,
-                                      inner_transfer_function=lasagne.nonlinearities.tanh,
-                                      outer_transfer_function=lasagne.nonlinearities.linear)
-
-    #Get output and shape of the predictions for u and v
-
-    u_prediction = lasagne.layers.get_output(x_network)
-    v_prediction = lasagne.layers.get_output(y_network)
-
-    u_shape = lasagne.layers.get_output_shape(x_network, input_shape)
-    v_shape = lasagne.layers.get_output_shape(y_network, input_shape)
-
-
-    return u_prediction, u_shape, v_prediction, v_shape, x_network, y_network
-
-
-def train_double_barreled_network(x_input, y_input, num_epochs=100):
-
+def train_double_barreled_network(x_input, y_input, x_input_train, y_input_train, x_target_train, y_target_train, num_epochs=100):
     u, u_shape, v, v_shape, x_network, y_network = double_barreled_network(x_input, y_input)
 
     cost = functions.minus_corr(u, v)
+    cost = cost.mean()
     x_params = lasagne.layers.get_all_params(x_network)
     y_params = lasagne.layers.get_all_params(y_network)
     x_y_params = x_params + y_params
@@ -51,13 +26,12 @@ def train_double_barreled_network(x_input, y_input, num_epochs=100):
 
     print 'Start training double barreled network'
 
-
     for epoch in range(num_epochs):
         # In each epoch, we do a full pass over the training data:
         train_err = 0
         train_batches = 0
         start_time = time.time()
-        for batch in iterate_minibatches(x_train, y_train, 100, shuffle=True):
+        for batch in iterate_minibatches(x_input_train, y_input_train, x_target_train, y_target_train, 100, shuffle=True):
             x, u, y, v = batch
             train_err += train_fn(u, v)
             train_batches += 1
@@ -68,38 +42,18 @@ def train_double_barreled_network(x_input, y_input, num_epochs=100):
         print("  training loss:\t\t{:.6f}".format(train_err / train_batches))
 
 
-
-
-
-
-def outer_networks(u_input, u_shape, v_input, v_shape):
-
-    #Create both outer neural networks
-
-    u_network = create_neural_network(u_input, input_shape=u_shape, output_nodes=3,
-                                      inner_transfer_function=lasagne.nonlinearities.tanh,
-                                      outer_transfer_function=lasagne.nonlinearities.linear)
-
-
-    v_network = create_neural_network(v_input, input_shape=v_shape, output_nodes=3,
-                                      inner_transfer_function=lasagne.nonlinearities.tanh,
-                                      outer_transfer_function=lasagne.nonlinearities.linear)
-
-    x_prediction = lasagne.layers.get_output(u_network)
-    y_prediction = lasagne.layers.get_output(v_network)
-
-    #
-
+def train_outer_network(input_, target, name, num_epochs=100):
+    out, shape, network = outer_network(inp=input_, name=name)
+    cost = lasagne.objectives.squared_error(out, target)
 
 
 if __name__ == '__main__':
-    x_train, y_train, x_val, y_val= generate_dataset(1000)
+    x_inputs_train, x_inputs_val, y_inputs_train, y_inputs_val, x_targets_train, x_targets_val, y_targets_train, \
+        y_targets_val = generate_dataset(1000, 100)
 
-    x_input = T.tensor3('x_inputs')
-    y_input = T.tensor3('y_input')
-    u_output = T.tensor3('u_output')
-    v_output = T.tensor3('u_output')
+    x_input = T.tensor4('x_inputs')
+    y_input = T.tensor4('y_input')
+    u_output = T.tensor4('u_output')
+    v_output = T.tensor4('u_output')
 
-    train_double_barreled_network(x_input, y_input)
-
-
+    train_double_barreled_network(x_input, y_input, x_inputs_train, y_inputs_train, x_targets_train, y_targets_train)

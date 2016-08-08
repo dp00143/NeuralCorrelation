@@ -3,6 +3,7 @@ import random
 import theano
 import theano.tensor as T
 
+
 # ############################# Batch iterator ###############################
 # This is just a simple helper function iterating over training data in
 # mini-batches of a particular size, optionally in random order. It assumes
@@ -32,10 +33,7 @@ def iterate_minibatches(x_inputs, x_targets, y_inputs, y_targets, batchsize, shu
         yield x_inputs[excerpt], x_targets[excerpt], y_inputs[excerpt], y_targets[excerpt]
 
 
-
-
-def generate_dataset(n):
-
+def generate_dataset(n, validation_n):
     rng = random.Random(123)
 
     x_inputs, y_inputs, x_targets, y_targets = [[], [], []], [[], [], []], [[], [], []], [[], [], []]
@@ -54,7 +52,16 @@ def generate_dataset(n):
             x_targets[i].append(x_target_functions[i](s))
             y_targets[i].append(y_target_functions[i](s))
 
-    return x_inputs, y_inputs, x_targets, y_targets
+    x_inputs_train, x_inputs_val = [x_inputs[i][:-validation_n] for i in range(3)], \
+                                   [x_inputs[i][-validation_n:] for i in range(3)]
+    y_inputs_train, y_inputs_val = [y_inputs[i][:-validation_n] for i in range(3)], \
+                                   [x_inputs[i][-validation_n:] for i in range(3)]
+    x_targets_train, x_targets_val = [x_targets[i][:-validation_n] for i in range(3)], \
+                                     [x_inputs[i][-validation_n:] for i in range(3)]
+    y_targets_train, y_targets_val = [y_targets[i][:-validation_n] for i in range(3)], \
+                                     [x_inputs[i][-validation_n:] for i in range(3)]
+
+    return x_inputs_train, x_inputs_val, y_inputs_train, y_inputs_val, x_targets_train, x_targets_val, y_targets_train, y_targets_val
 
 
 ###################
@@ -64,22 +71,27 @@ def generate_dataset(n):
 
 
 def x1(t):
-    return t-0.3*t**2
+    return t - 0.3 * t ** 2
+
 
 def x2(t):
-    return t + 0.3*t**3
+    return t + 0.3 * t ** 3
+
 
 def x3(t):
-    return t**2
+    return t ** 2
+
 
 def y1(t):
-    return t**3
+    return t ** 3
+
 
 def y2(t):
-    return -t + 0.3**3
+    return -t + 0.3 ** 3
 
-def y3(t): 
-    return t + 0.3*t**2
+
+def y3(t):
+    return t + 0.3 * t ** 2
 
 
 ###################
@@ -88,19 +100,24 @@ def y3(t):
 #
 
 def x1_(s):
-    return -s-0.3*s**2
+    return -s - 0.3 * s ** 2
+
 
 def x2_(s):
-    return s - 0.3*s**3
+    return s - 0.3 * s ** 3
+
 
 def x3_(s):
-    return -s**4
+    return -s ** 4
+
 
 def y1_(s):
-    return 1./np.cosh(4*s)
+    return 1. / np.cosh(4 * s)
+
 
 def y2_(s):
-    return s + 0.3**3
+    return s + 0.3 ** 3
+
 
 def y3_(s):
-    return s - 0.3*s**2
+    return s - 0.3 * s ** 2

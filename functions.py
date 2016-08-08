@@ -13,8 +13,6 @@ def cosine_similarity(u, v):
 
 
 def minus_corr(u, v):
-    u_input = T.tensor3()
-    v_input = T.tensor3()
 
     #First give expression calculating the cosine similarity
     cos_sim = cosine_similarity(u - T.mean(u), v - T.mean(u))
@@ -25,3 +23,4 @@ def minus_corr(u, v):
     neg_corr = T.clip(neg_corr, -1, 1)
 
     return neg_corr
+

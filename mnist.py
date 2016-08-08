@@ -256,7 +256,9 @@ def main(model='mlp', num_epochs=500):
 
     # Create a loss expression for training, i.e., a scalar objective we want
     # to minimize (for our multi-class problem, it is the cross-entropy loss):
+    # prediction = network.get_output_for(input_var)
     prediction = lasagne.layers.get_output(network)
+
     loss = lasagne.objectives.categorical_crossentropy(prediction, target_var)
     loss = loss.mean()
     # We could add some weight decay as well here, see lasagne.regularization.
@@ -264,7 +266,7 @@ def main(model='mlp', num_epochs=500):
     # Create update expressions for training, i.e., how to modify the
     # parameters at each training step. Here, we'll use Stochastic Gradient
     # Descent (SGD) with Nesterov momentum, but Lasagne offers plenty more.
-    params = lasagne.layers.get_all_params(network, trainable=True)
+    params = lasagne.layers.get_all_params(network,  trainable=True)
     updates = lasagne.updates.nesterov_momentum(
             loss, params, learning_rate=0.01, momentum=0.9)
 
