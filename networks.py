@@ -21,7 +21,6 @@ def create_neural_network(input_var, input_shape, output_nodes, inner_transfer_f
     return out
 
 def double_barreled_network(x_input, y_input):
-
     input_shape = (None, 1, 3)
 
     #Create double barreled neural network
@@ -44,7 +43,6 @@ def double_barreled_network(x_input, y_input):
 
     u_shape = lasagne.layers.get_output_shape(x_network, input_shape)
     v_shape = lasagne.layers.get_output_shape(y_network, input_shape)
-
     # u_shape = x_network.get_output_shape_for(x_input)
     # v_shape = y_network.get_output_shape_for(y_input)
 

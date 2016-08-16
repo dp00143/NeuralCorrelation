@@ -6,7 +6,7 @@ from pprint import pprint
 
 
 def cosine_similarity(u, v):
-    inner = T.dot(u, v)
+    inner = T.dot(u, v.T)
     u_norm = T.sqrt(T.sum(T.sqr(u)))
     v_norm = T.sqrt(T.sum(T.sqr(v)))
     return inner / u_norm * v_norm
@@ -15,7 +15,7 @@ def cosine_similarity(u, v):
 def minus_corr(u, v):
 
     #First give expression calculating the cosine similarity
-    cos_sim = cosine_similarity(u - T.mean(u), v - T.mean(u))
+    # cos_sim = cosine_similarity(u - T.mean(u), v - T.mean(u))
 
     #Cosine similarity can be converted to Pearson coefficient (Corr(x,y) = CosSim(x-x_mean, y-y_mean)
     corr = cosine_similarity(u-T.mean(u), v-T.mean(v))

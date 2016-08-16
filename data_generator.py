@@ -36,7 +36,7 @@ def iterate_minibatches(x_inputs, x_targets, y_inputs, y_targets, batchsize, shu
 def generate_dataset(n, validation_n):
     rng = random.Random(123)
 
-    x_inputs, y_inputs, x_targets, y_targets = [[], [], []], [[], [], []], [[], [], []], [[], [], []]
+    x_inputs, y_inputs, x_targets, y_targets = [], [], [], []
     x_input_functions = [x1, x2, x3]
     y_input_functions = [y1, y2, y3]
     x_target_functions = [x1_, x2_, x3_]
@@ -46,20 +46,23 @@ def generate_dataset(n, validation_n):
         s = rng.uniform(-1, 1)
         t = rng.uniform(-1, 1)
 
-        for i in range(3):
-            x_inputs[i].append(x_input_functions[i](t))
-            y_inputs[i].append(y_input_functions[i](t))
-            x_targets[i].append(x_target_functions[i](s))
-            y_targets[i].append(y_target_functions[i](s))
+        x_inputs.append([[x_input_functions[i](t) for i in range(3)]])
+        x_targets.append([[y_input_functions[i](t) for i in range(3)]])
+        y_inputs.append([[x_target_functions[i](t) for i in range(3)]])
+        y_targets.append([[y_target_functions[i](t) for i in range(3)]])
 
-    x_inputs_train, x_inputs_val = [x_inputs[i][:-validation_n] for i in range(3)], \
-                                   [x_inputs[i][-validation_n:] for i in range(3)]
-    y_inputs_train, y_inputs_val = [y_inputs[i][:-validation_n] for i in range(3)], \
-                                   [x_inputs[i][-validation_n:] for i in range(3)]
-    x_targets_train, x_targets_val = [x_targets[i][:-validation_n] for i in range(3)], \
-                                     [x_inputs[i][-validation_n:] for i in range(3)]
-    y_targets_train, y_targets_val = [y_targets[i][:-validation_n] for i in range(3)], \
-                                     [x_inputs[i][-validation_n:] for i in range(3)]
+    x_inputs_train, x_inputs_val = np.array(x_inputs[:-validation_n]), np.array(x_inputs[-validation_n:])
+    y_inputs_train, y_inputs_val = np.array(y_inputs[:-validation_n]), np.array(y_inputs[-validation_n:])
+    x_targets_train, x_targets_val = np.array(x_targets[:-validation_n]), np.array(x_targets[-validation_n:])
+    y_targets_train, y_targets_val = np.array(y_targets[:-validation_n]), np.array(y_targets[-validation_n:])
+    # x_inputs_train, x_inputs_val = [x_inputs[i][:-validation_n] for i in range(3)], \
+    #                                [x_inputs[i][-validation_n:] for i in range(3)]
+    # y_inputs_train, y_inputs_val = [y_inputs[i][:-validation_n] for i in range(3)], \
+    #                                [x_inputs[i][-validation_n:] for i in range(3)]
+    # x_targets_train, x_targets_val = [x_targets[i][:-validation_n] for i in range(3)], \
+    #                                  [x_inputs[i][-validation_n:] for i in range(3)]
+    # y_targets_train, y_targets_val = [y_targets[i][:-validation_n] for i in range(3)], \
+    #                                  [x_inputs[i][-validation_n:] for i in range(3)]
 
     return x_inputs_train, x_inputs_val, y_inputs_train, y_inputs_val, x_targets_train, x_targets_val, y_targets_train, y_targets_val
 
