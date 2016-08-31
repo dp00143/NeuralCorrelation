@@ -18,7 +18,11 @@ def create_neural_network(input_var, input_shape, output_nodes, inner_transfer_f
     # Fully connected output layer
     out = lasagne.layers.DenseLayer(hidden, output_nodes, nonlinearity=outer_transfer_function, name='%s.out' % name)
 
-    return out
+    if input_var is None:
+        input_var = in_layer.input_var
+        return out, input_var
+    else:
+        return out
 
 def double_barreled_network(x_input, y_input):
     input_shape = (None, 1, 3)
@@ -49,15 +53,15 @@ def double_barreled_network(x_input, y_input):
     return u_prediction, u_shape, v_prediction, v_shape, x_network, y_network
 
 
-def outer_network(inp, name):
+def outer_network(name):
 
-    input_shape = (None, 1, 1)
-
-    network = create_neural_network(inp, name=name, input_shape=input_shape, output_nodes=3,
+    input_shape = (None, 1)
+    # input_shape = (None, inp.shape)
+    network, input_var = create_neural_network(None, name=name, input_shape=input_shape, output_nodes=3,
                                     inner_transfer_function=lasagne.nonlinearities.tanh,
                                     outer_transfer_function=lasagne.nonlinearities.linear)
 
     prediction = lasagne.layers.get_output(network)
     shape = lasagne.layers.get_output_shape(network)
 
-    return prediction, shape, network
+    return prediction, shape, network, input_var
