@@ -2,6 +2,7 @@ import numpy as np
 import random
 import theano
 import theano.tensor as T
+from math import sqrt
 
 
 # ############################# Batch iterator ###############################
@@ -34,6 +35,7 @@ def iterate_minibatches(x_inputs, x_targets, y_inputs, y_targets, batchsize, shu
 
 
 def generate_dataset(n, validation_n):
+    # raise Exception('Not the correct way to generate data, use generate_sample_data(num=500) instead')
     rng = random.Random(123)
 
     x_inputs, y_inputs, x_targets, y_targets = [], [], [], []
@@ -47,9 +49,9 @@ def generate_dataset(n, validation_n):
         t = rng.uniform(-1, 1)
 
         x_inputs.append([[x_input_functions[i](t) for i in range(3)]])
-        x_targets.append([[y_input_functions[i](t) for i in range(3)]])
+        x_targets.append([[y_input_functions[i](s) for i in range(3)]])
         y_inputs.append([[x_target_functions[i](t) for i in range(3)]])
-        y_targets.append([[y_target_functions[i](t) for i in range(3)]])
+        y_targets.append([[y_target_functions[i](s) for i in range(3)]])
 
     x_inputs_train, x_inputs_val = np.array(x_inputs[:-validation_n]), np.array(x_inputs[-validation_n:])
     y_inputs_train, y_inputs_val = np.array(y_inputs[:-validation_n]), np.array(y_inputs[-validation_n:])
@@ -69,7 +71,7 @@ def generate_dataset(n, validation_n):
 
 ###################
 #
-# Functions to generate the sample inputs defined in Hsieh et al.
+# Functions to generate the first mode defined in Hsieh et al.
 #
 
 
@@ -90,7 +92,7 @@ def y1(t):
 
 
 def y2(t):
-    return -t + 0.3 ** 3
+    return -t + 0.3 * t ** 3
 
 
 def y3(t):
@@ -99,7 +101,7 @@ def y3(t):
 
 ###################
 #
-# Functions to generate the sample targets defined in Hsieh et al.
+# Functions to generate the second mode defined in Hsieh et al.
 #
 
 def x1_(s):
@@ -119,8 +121,127 @@ def y1_(s):
 
 
 def y2_(s):
-    return s + 0.3 ** 3
+    return s + 0.3 * s ** 3
 
 
 def y3_(s):
     return s - 0.3 * s ** 2
+
+
+
+def generate_sample_data(num=500):
+    t_gen = random.Random(10)
+    s_gen = random.Random(20)
+    x = []
+    y = []
+    x_modes_1 = [x1, x2, x3]
+    x_modes_2 = [x1_, x2_, x3_]
+    y_modes_1 = [y1, y2, y3]
+    y_modes_2 = [y1_, y2_, y3_]
+
+    for i in range(num):
+        t = t_gen.uniform(-1, 1)
+        s = s_gen.uniform(-(1. / sqrt(3)), 1. / sqrt(3))
+        x.append([[x_modes_1[j](t) + x_modes_2[j](s) for j in range(3)]])
+        # y.append([[(x_modes_1[j](t) + x_modes_2[j](s)) for j in range(3)]])
+        y.append([[y_modes_1[j](s) + y_modes_2[j](s) for j in range(3)]])
+    y = x
+    return x, y
+
+
+def generate_sample_data_for_visualisation(num=500):
+    t_gen = random.Random(10)
+    s_gen = random.Random(20)
+    x = [[], [], []]
+    y = [[], [], []]
+    x_modes_1 = [x1, x2, x3]
+    x_modes_2 = [x1_, x2_, x3_]
+    y_modes_1 = [y1, y2, y3]
+    y_modes_2 = [y1_, y2_, y3_]
+
+    for i in range(num):
+        t = t_gen.uniform(-1, 1)
+        s = s_gen.uniform(-(1./sqrt(3)), 1./sqrt(3))
+        for j in range(3):
+            x[j].append(x_modes_1[j](t) + x_modes_2[j](s))
+            y[j].append(y_modes_1[j](t) + y_modes_2[j](s))
+    return x, y
+
+def generate_theoretical_modes():
+    base1 = np.linspace(-1.0, 1.0, num=100)
+    base2 = np.linspace(-(1./sqrt(3)), 1./sqrt(3), num=100)
+    x = [[x1(t) for t in base1], [x2(t) for t in base1], [x3(t) for t in base1]]
+    y = [[y1(t) for t in base1], [y2(t) for t in base1], [y3(t) for t in base1]]
+
+    x_ = [[x1_(t) for t in base2], [x2_(t) for t in base2], [x3_(t) for t in base2]]
+    y_ = [[y1_(t) for t in base2], [y2_(t) for t in base2], [y3_(t) for t in base2]]
+
+    # x, y, x_, y_ = normalize(x, y, x_, y_)
+    return x, y, x_, y_
+
+def normalize(*args):
+    ret = []
+    for ar in args:
+        num_ar = np.asarray(ar)
+        mean = num_ar.mean()
+        std = num_ar.std()
+        normalized_array = [(x-mean)/std for x in ar]
+        ret.append(normalized_array)
+    return ret
+
+
+
+
+
+def plot_data_x(axis1=0, axis2=1):
+    from matplotlib import pyplot as plt
+    x, y = generate_sample_data_for_visualisation()
+    x_mode1, y_mode1, x_mode2, y_mode2 = generate_theoretical_modes()
+
+    plt.plot(x_mode1[axis1], x_mode1[axis2])
+    plt.plot(x_mode2[axis1], x_mode2[axis2])
+    plt.scatter(x[axis1], x[axis2])
+    plt.xlim([-3, 2])
+    plt.ylim([-3, 3])
+    plt.show()
+    plt.clf()
+
+def plot_data_y(axis1=0, axis2=1):
+    from matplotlib import pyplot as plt
+    x, y = generate_sample_data_for_visualisation()
+    x_mode1, y_mode1, x_mode2, y_mode2 = generate_theoretical_modes()
+
+    plt.plot(y_mode1[axis1], y_mode1[axis2])
+    plt.plot(y_mode2[axis1], y_mode2[axis2])
+    plt.scatter(y[axis1], y[axis2])
+    plt.show()
+if __name__ == '__main__':
+    plot_data_x(0, 1)
+    plot_data_x(0, 2)
+    plot_data_x(1, 2)
+
+    plot_data_y(0, 1)
+    plot_data_y(0, 2)
+    plot_data_y(1, 2)
+
+# def plot_theoretical_modes():
+#     from matplotlib import pyplot as plt
+#     x = np.linspace(-1.0,1.0,num=100)
+#     x1 = [x1(t) for t in x]
+#     x2 = [x2(t) for t in x]
+#     x3 = [x3(t) for t in x]
+#     y1 = [y1(t) for t in x]
+#     y2 = [y2(t) for t in x]
+#     y3 = [y3(t) for t in x]
+#
+#     x1_ = [x1_(t) for t in x]
+#     x2_ = [x2_(t) for t in x]
+#     x3_ = [x3_(t) for t in x]
+#     y1_ = [y1_(t) for t in x]
+#     y2_ = [y2_(t) for t in x]
+#     y3_ = [y3_(t) for t in x]
+#
+#     plt.plot(x1,x2)
+#     plt.plot(x1_,x2_)
+#     plt.show(block=True)
+#     print 'hello'
