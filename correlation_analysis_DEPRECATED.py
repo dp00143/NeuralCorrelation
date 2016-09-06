@@ -149,7 +149,7 @@ if __name__ == '__main__':
     theano.config.exception_verbosity='high'
     theano.config.optimizer='None'
     x_inputs_train, x_inputs_val, y_inputs_train, y_inputs_val, x_targets_train, x_targets_val, y_targets_train, \
-        y_targets_val = generate_dataset(1000000, 100000)
+        y_targets_val = generate_dataset(1000, 100)
 
     num_epochs = 1000
 
