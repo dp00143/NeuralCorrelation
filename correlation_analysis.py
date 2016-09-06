@@ -23,7 +23,7 @@ def train_double_barreled_network(x_inputs, y_inputs, num_epochs):
     y_params = lasagne.layers.get_all_params(y_network)
     x_y_params = x_params + y_params
 
-    updates = lasagne.updates.sgd(cost, x_y_params, learning_rate=0.1)
+    updates = lasagne.updates.nesterov_momentum(cost, x_y_params, learning_rate=0.1)
 
 
     # train_fn = theano.function([x_input, y_input, u, v], cost, updates=updates)
@@ -37,8 +37,8 @@ def train_double_barreled_network(x_inputs, y_inputs, num_epochs):
         train_err = 0
         train_batches = 0
         start_time = time.time()
-        u_eval = u.eval({x_input: x_inputs})
-        v_eval = v.eval({y_input: y_inputs})
+        # u_eval = u.eval({x_input: x_inputs})
+        # v_eval = v.eval({y_input: y_inputs})
         # train_err += train_fn(x_inputs, y_inputs, u_eval, v_eval)
         train_err += train_fn(x_inputs, y_inputs)
         train_batches += 1
@@ -69,8 +69,8 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs)
     params_u = lasagne.layers.get_all_params(u_network)
     params_v = lasagne.layers.get_all_params(v_network)
 
-    updates_u = lasagne.updates.sgd(cost_u, params_u, learning_rate=0.1)
-    updates_v = lasagne.updates.sgd(cost_v, params_v, learning_rate=0.1)
+    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=0.1)
+    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=0.1)
 
     train_fn_u = theano.function([input_var_u, target_var_x], cost_u, updates=updates_u)
     train_fn_v = theano.function([input_var_v, target_var_y], cost_v, updates=updates_v)
@@ -148,7 +148,7 @@ if __name__ == '__main__':
     theano.config.optimizer='None'
     x_inputs, y_inputs = generate_sample_data()
 
-    num_epochs = 1000
+    num_epochs = 100
 
     min_cost = None
 

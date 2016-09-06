@@ -7,7 +7,7 @@ from numpy.core.numeric import outer
 
 
 def create_neural_network(input_var, input_shape, output_nodes, inner_transfer_function, name,
-                          outer_transfer_function, width=3):
+                          outer_transfer_function, width=10):
 
     # Input layer
     in_layer = lasagne.layers.InputLayer(shape=input_shape, input_var=input_var, name=name)

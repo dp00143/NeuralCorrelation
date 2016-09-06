@@ -145,8 +145,18 @@ def generate_sample_data(num=500):
         x.append([[x_modes_1[j](t) + x_modes_2[j](s) for j in range(3)]])
         # y.append([[(x_modes_1[j](t) + x_modes_2[j](s)) for j in range(3)]])
         y.append([[y_modes_1[j](s) + y_modes_2[j](s) for j in range(3)]])
-    y = x
+    # x = add_noise(x, 490, 0.1)
+    # y = add_noise(y, , 0.1)
+    # x, y = normalize(x, y)
     return x, y
+
+def add_noise(data, noise_num=50, std=0.2):
+    gaus_gen = random.Random(30)
+    indices = random.sample(range(1, len(data)), noise_num)
+    for i, idx in zip(range(noise_num), indices):
+        data[idx] = [[gaus_gen.gauss(0, std), gaus_gen.gauss(0, std), gaus_gen.gauss(0, std)]]
+    return data
+
 
 
 def generate_sample_data_for_visualisation(num=500):
@@ -165,6 +175,7 @@ def generate_sample_data_for_visualisation(num=500):
         for j in range(3):
             x[j].append(x_modes_1[j](t) + x_modes_2[j](s))
             y[j].append(y_modes_1[j](t) + y_modes_2[j](s))
+
     return x, y
 
 def generate_theoretical_modes():
