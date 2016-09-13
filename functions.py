@@ -5,24 +5,16 @@ from scipy.stats import linregress
 from pprint import pprint
 
 
-def cosine_similarity(u, v):
-    inner = T.dot(u.T, v)
-    u_norm = T.sqrt(T.sum(T.sqr(u)))
-    v_norm = T.sqrt(T.sum(T.sqr(v)))
-    return inner / u_norm * v_norm
 
 
 def minus_corr(u, v):
-
-    #First give expression calculating the cosine similarity
-    # cos_sim = cosine_similarity(u - T.mean(u), v - T.mean(u))
-
-    #Cosine similarity can be converted to Pearson coefficient (Corr(x,y) = CosSim(x-x_mean, y-y_mean)
-    corr = cosine_similarity(u-T.mean(u), v-T.mean(v))
-    neg_corr = -corr
-    # neg_corr = T.clip(neg_corr, -1, 1)
-
-    return neg_corr
+    um = T.sub(u, T.mean(u))
+    vm = T.sub(v, T.mean(v))
+    r_num = T.sum(T.mul(um, vm))
+    r_den = T.sqrt(T.mul(T.sum(T.sqr(um)), T.sum(T.sqr(vm))))
+    r = T.true_div(r_num, r_den)
+    r = T.neg(r)
+    return r
 
 def minus_corr_with_constraints(u, v):
     neg_corr= minus_corr(u, v)

@@ -145,9 +145,10 @@ def generate_sample_data(num=500):
         x.append([[x_modes_1[j](t) + x_modes_2[j](s) for j in range(3)]])
         # y.append([[(x_modes_1[j](t) + x_modes_2[j](s)) for j in range(3)]])
         y.append([[y_modes_1[j](s) + y_modes_2[j](s) for j in range(3)]])
-    # x = add_noise(x, 490, 0.1)
-    # y = add_noise(y, , 0.1)
-    # x, y = normalize(x, y)
+    x = add_noise(x, 20, 0.1)
+    y = add_noise(y, 20, 0.1)
+    x, y = normalize(x, y)
+    # y = x
     return x, y
 
 def add_noise(data, noise_num=50, std=0.2):

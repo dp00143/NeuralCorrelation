@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="019d40c0-0285-4c52-b347-a9ec0ed75f89" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/single_network_training.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/correlation_analysis.py" afterPath="$PROJECT_DIR$/correlation_analysis.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_generator.py" afterPath="$PROJECT_DIR$/data_generator.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.py" afterPath="$PROJECT_DIR$/functions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networks.py" afterPath="$PROJECT_DIR$/networks.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/similarity.py" afterPath="$PROJECT_DIR$/similarity.py" />
     </list>
     <ignored path="NeuralCorrelation.iws" />
@@ -22,8 +21,8 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/NeuralCorrelation$mnist__1_.coverage" NAME="mnist (1) Coverage Results" MODIFIED="1473096748917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../MNIST" />
     <SUITE FILE_PATH="coverage/NeuralCorrelation$mnist.coverage" NAME="mnist Coverage Results" MODIFIED="1472142980047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NeuralCorrelation$correlation_analysis.coverage" NAME="correlation_analysis Coverage Results" MODIFIED="1473181503796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NeuralCorrelation$similarity.coverage" NAME="similarity Coverage Results" MODIFIED="1473096177002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NeuralCorrelation$correlation_analysis.coverage" NAME="correlation_analysis Coverage Results" MODIFIED="1473773659242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NeuralCorrelation$similarity.coverage" NAME="similarity Coverage Results" MODIFIED="1473763661141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NeuralCorrelation$correlation_analysis_DEPRECATED.coverage" NAME="correlation_analysis_DEPRECATED Coverage Results" MODIFIED="1473078226685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NeuralCorrelation$data_generator.coverage" NAME="data_generator Coverage Results" MODIFIED="1473094826349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NeuralCorrelation$single_network_training.coverage" NAME="single_network_training Coverage Results" MODIFIED="1473177033021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -40,7 +39,7 @@
               <entry file="file://$PROJECT_DIR$/correlation_analysis.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="1557">
-                    <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+                    <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
                     <folding>
                       <element signature="e#0#18#0" expanded="true" />
                     </folding>
@@ -63,14 +62,14 @@
             <file leaf-file-name="basic.py" pinned="false" current-in-tab="false">
               <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/basic.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="238">
-                    <caret line="2082" column="4" selection-start-line="2082" selection-start-column="4" selection-end-line="2082" selection-end-column="4" />
+                  <state relative-caret-position="-356">
+                    <caret line="5419" column="6" selection-start-line="5419" selection-start-column="6" selection-end-line="5419" selection-end-column="6" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="mnist.py" pinned="false" current-in-tab="true">
+            <file leaf-file-name="mnist.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/../MNIST/mnist.py">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="627">
@@ -100,6 +99,28 @@
                 </provider>
               </entry>
             </file>
+            <file leaf-file-name="similarity.py" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/similarity.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="542">
+                    <caret line="2008" column="10" selection-start-line="2008" selection-start-column="10" selection-end-line="2008" selection-end-column="10" />
+                    <folding>
+                      <element signature="e#37522#37534#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="stats.py" pinned="false" current-in-tab="true">
+              <entry file="file:///usr/local/lib/python2.7/dist-packages/scipy/stats/stats.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="483">
+                    <caret line="3024" column="27" selection-start-line="3024" selection-start-column="27" selection-end-line="3024" selection-end-column="27" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
           </leaf>
         </state>
       </content>
@@ -114,8 +135,8 @@
       <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="148" column="15" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
+            <state relative-caret-position="401">
+              <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -136,8 +157,8 @@
       <file leaf-file-name="correlation_analysis.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/correlation_analysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state relative-caret-position="167">
+              <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -160,39 +181,17 @@
       <file leaf-file-name="functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="similarity.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/similarity.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="1007" column="8" selection-start-line="1007" selection-start-column="8" selection-end-line="1007" selection-end-column="8" />
-              <folding>
-                <element signature="e#18510#18522#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="distance.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python2.7/dist-packages/scipy/spatial/distance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="403" column="4" selection-start-line="403" selection-start-column="4" selection-end-line="403" selection-end-column="4" />
+            <state relative-caret-position="270">
+              <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/numpy/__init__.py">
+        <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-108">
+            <state relative-caret-position="-403">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -239,11 +238,11 @@
         <option value="/usr/local/lib/python2.7/dist-packages/theano/gof/link.py" />
         <option value="$PROJECT_DIR$/mnist.py" />
         <option value="$PROJECT_DIR$/correlation_analysis_DEPRECATED.py" />
-        <option value="$PROJECT_DIR$/similarity.py" />
         <option value="$PROJECT_DIR$/single_network_training.py" />
         <option value="$PROJECT_DIR$/networks.py" />
-        <option value="$PROJECT_DIR$/data_generator.py" />
+        <option value="$PROJECT_DIR$/similarity.py" />
         <option value="$PROJECT_DIR$/functions.py" />
+        <option value="$PROJECT_DIR$/data_generator.py" />
         <option value="$PROJECT_DIR$/correlation_analysis.py" />
       </list>
     </option>
@@ -639,9 +638,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.correlation_analysis" />
-        <item index="1" class="java.lang.String" itemvalue="Python.single_network_training" />
-        <item index="2" class="java.lang.String" itemvalue="Python.mnist (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.similarity" />
+        <item index="1" class="java.lang.String" itemvalue="Python.similarity" />
+        <item index="2" class="java.lang.String" itemvalue="Python.single_network_training" />
+        <item index="3" class="java.lang.String" itemvalue="Python.mnist (1)" />
         <item index="4" class="java.lang.String" itemvalue="Python.data_generator" />
       </list>
     </recent_temporary>
@@ -681,7 +680,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35120925" sideWeight="0.4978435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35120925" sideWeight="0.4978435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -749,13 +748,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/correlation_analysis.py</url>
-          <line>206</line>
+          <line>204</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/data_generator.py</url>
-          <line>150</line>
-          <option name="timeStamp" value="61" />
+          <url>file://$PROJECT_DIR$/correlation_analysis.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -768,62 +767,19 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="65" />
+      <option name="time" value="67" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="ndim" language="Python" />
-        <watch expression="x_network.hidden.b" language="Python" />
-        <watch expression="input_var.ndim" language="Python" />
-        <watch expression="u_eval.mean()" language="Python" />
-        <watch expression="v_eval.mean()" language="Python" />
-        <watch expression="u_eval.std()" language="Python" />
-        <watch expression="v_eval.std()" language="Python" />
-        <watch expression="max(u_eval)" language="Python" />
-        <watch expression="max(v_eval)" language="Python" />
-        <watch expression="u_eval[:5]" language="Python" />
-        <watch expression="x_inputs[:5]" language="Python" />
-        <watch expression="data[79]" language="Python" />
-        <watch expression="x[79]" language="Python" />
-        <watch expression="x" language="Python" />
+        <watch expression="u_eval" language="Python" />
+        <watch expression="v_eval" language="Python" />
+        <watch expression="functions.cosine_similarity(u_eval, v_eval)" language="Python" />
+        <watch expression="curr_err" language="Python" />
+        <watch expression="train_err" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/compile/function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/compile/pfunc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8586">
-          <caret line="489" column="0" selection-start-line="489" selection-start-column="0" selection-end-line="489" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/gof/graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9054">
-          <caret line="513" column="0" selection-start-line="513" selection-start-column="0" selection-end-line="513" selection-end-column="0" />
-          <folding>
-            <element signature="e#76#140#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/compile/function_module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13104">
-          <caret line="751" column="0" selection-start-line="751" selection-start-column="0" selection-end-line="751" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/networks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -1026,14 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/scipy/spatial/distance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="403" column="4" selection-start-line="403" selection-start-column="4" selection-end-line="403" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/layers/dense.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -1050,26 +998,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/nnet/nnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-183">
-          <caret line="2032" column="4" selection-start-line="2032" selection-start-column="4" selection-end-line="2032" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/updates.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
           <caret line="296" column="4" selection-start-line="296" selection-start-column="4" selection-end-line="296" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="2082" column="4" selection-start-line="2082" selection-start-column="4" selection-end-line="2082" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1102,13 +1034,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/similarity.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="1007" column="8" selection-start-line="1007" selection-start-column="8" selection-end-line="1007" selection-end-column="8" />
-          <folding>
-            <element signature="e#18510#18522#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1120,28 +1050,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/scipy/spatial/distance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="2340">
+          <caret line="403" column="4" selection-start-line="403" selection-start-column="4" selection-end-line="403" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/nnet/nnet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-183">
+          <caret line="2032" column="4" selection-start-line="2032" selection-start-column="4" selection-end-line="2032" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-403">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.2/system/python_stubs/-1247972723/numpy/core/umath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-356">
+          <caret line="5419" column="6" selection-start-line="5419" selection-start-column="6" selection-end-line="5419" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/similarity.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="2008" column="10" selection-start-line="2008" selection-start-column="10" selection-end-line="2008" selection-end-column="10" />
+          <folding>
+            <element signature="e#37522#37534#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/scipy/stats/stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="3024" column="27" selection-start-line="3024" selection-start-column="27" selection-end-line="3024" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="148" column="15" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
+        <state relative-caret-position="401">
+          <caret line="148" column="28" selection-start-line="148" selection-start-column="28" selection-end-line="148" selection-end-column="28" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/correlation_analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state relative-caret-position="167">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

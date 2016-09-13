@@ -37,10 +37,8 @@ def train_double_barreled_network(x_inputs, y_inputs, num_epochs):
         train_err = 0
         train_batches = 0
         start_time = time.time()
-        # u_eval = u.eval({x_input: x_inputs})
-        # v_eval = v.eval({y_input: y_inputs})
-        # train_err += train_fn(x_inputs, y_inputs, u_eval, v_eval)
-        train_err += train_fn(x_inputs, y_inputs)
+        curr_err = train_fn(x_inputs, y_inputs)
+        train_err += curr_err
         train_batches += 1
 
         training_loss = train_err / train_batches
