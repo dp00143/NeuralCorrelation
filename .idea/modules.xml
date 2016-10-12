@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../CSV2DataStream/.idea/CSV2DataStream.iml" filepath="$PROJECT_DIR$/../CSV2DataStream/.idea/CSV2DataStream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HR/.idea/HR.iml" filepath="$PROJECT_DIR$/../HR/.idea/HR.iml" />
+      <module fileurl="file://$USER_HOME$/gdrive/Surrey/LDAPlusPlus/.idea/LDAPlusPlus.iml" filepath="$USER_HOME$/gdrive/Surrey/LDAPlusPlus/.idea/LDAPlusPlus.iml" />
       <module fileurl="file://$PROJECT_DIR$/../MNIST/.idea/MNIST.iml" filepath="$PROJECT_DIR$/../MNIST/.idea/MNIST.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/NeuralCorrelation.iml" filepath="$PROJECT_DIR$/.idea/NeuralCorrelation.iml" />
     </modules>
