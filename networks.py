@@ -24,8 +24,7 @@ def create_neural_network(input_var, input_shape, output_nodes, inner_transfer_f
     else:
         return out
 
-def double_barreled_network(x_input, y_input):
-    input_shape = (None, 1, 3)
+def double_barreled_network(x_input, y_input, input_shape=(None, 1, 3)):
 
     #Create double barreled neural network
     x_network = create_neural_network(x_input, name='x_network', input_shape=input_shape, output_nodes=1,

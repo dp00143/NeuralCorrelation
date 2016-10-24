@@ -5,17 +5,18 @@ import time
 
 from networks import double_barreled_network, outer_network
 import functions
+import numpy
 
 from data_generator import generate_sample_data
 
 import lasagne
 
 
-def train_double_barreled_network(x_inputs, y_inputs, num_epochs):
+def train_double_barreled_network(x_inputs, y_inputs, num_epochs, input_shape=(None, 1, 3)):
     x_input = T.tensor3('x_input')
     y_input = T.tensor3('y_input')
 
-    u, u_shape, v, v_shape, x_network, y_network = double_barreled_network(x_input, y_input)
+    u, u_shape, v, v_shape, x_network, y_network = double_barreled_network(x_input, y_input, input_shape)
 
     cost = functions.minus_corr(u, v)
     cost = cost.mean()
@@ -50,19 +51,23 @@ def train_double_barreled_network(x_inputs, y_inputs, num_epochs):
     return u, v, x_input, y_input, training_loss
 
 
-def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs):
-
-    target_var_x = T.tensor3('x_target')
-    target_var_y = T.tensor3('y_target')
+def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
+                         target_var_x=T.tensor3('x_target'), target_var_y=T.tensor3('y_target')):
 
     x_out, x_shape, u_network, input_var_u = outer_network(name='u_network')
     y_out, y_shape, v_network, input_var_v = outer_network(name='v_network')
 
 
     #Training function that is used to optimize the network
+    try:
+        x_out_shape = x_inputs.shape
+    except:
+        x_inputs = numpy.array(x_inputs)
+        y_inputs = numpy.array(y_inputs)
+        x_out_shape = x_inputs.shape
 
-    cost_u = lasagne.objectives.squared_error(x_out, target_var_x.reshape((1,500,3))).mean()
-    cost_v = lasagne.objectives.squared_error(y_out, target_var_y.reshape((1,500,3))).mean()
+    cost_u = lasagne.objectives.squared_error(x_out, target_var_x.reshape((x_out_shape[1], x_out_shape[0], x_out_shape[2]))).mean()
+    cost_v = lasagne.objectives.squared_error(y_out, target_var_y.reshape((x_out_shape[1], x_out_shape[0], x_out_shape[2]))).mean()
 
     params_u = lasagne.layers.get_all_params(u_network)
     params_v = lasagne.layers.get_all_params(v_network)
@@ -162,23 +167,23 @@ if __name__ == '__main__':
 
 
 
-    loss_u = None
+    loss_u, loss_v = None, None
     for i in range(ensemble_num):
         if loss_u is None:
-            loss_u, _ = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs)
+            loss_u, loss_v = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs)
         else:
             tmp = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs)
             if tmp[0]  < loss_u:
-                loss_u, _ = tmp
+                loss_u, loss_v = tmp
 
-    loss_v = None
-    for i in range(ensemble_num):
-        if loss_v is None:
-            _, loss_v = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs)
-        else:
-            tmp = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs)
-            if tmp[1] < loss_v:
-                _, loss_v = tmp
+    # loss_v = None
+    # for i in range(ensemble_num):
+    #     if loss_v is None:
+    #         _, loss_v = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs)
+    #     else:
+    #         tmp = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs)
+    #         if tmp[1] < loss_v:
+    #             _, loss_v = tmp
 
     from pprint import pprint
     print '#####################'
