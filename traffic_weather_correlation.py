@@ -20,14 +20,14 @@ def setup():
 
     context_stream.fill_in_missing_values(start, end)
     for key, stream in main_streams.items():
-        try:
-            stream.fill_in_missing_values(start, end)
-            break
-        except:
-            print key
-            for key, dup in enumerate(list(stream.data.index.duplicated())):
-                if dup:
-                    print stream.data.index[key]
+        # try:
+        stream.fill_in_missing_values(start, end)
+        #     break
+        # except Exception as e:
+        #     print key
+        #     for key, dup in enumerate(list(stream.data.index.duplicated())):
+        #         if dup:
+        #             print stream.data.index[key]
 
 
     return main_streams, main_features, context_stream, context_features, start, end
