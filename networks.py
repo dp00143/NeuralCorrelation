@@ -52,11 +52,11 @@ def double_barreled_network(x_input, y_input, input_shape=(None, 1, 3)):
     return u_prediction, u_shape, v_prediction, v_shape, x_network, y_network
 
 
-def outer_network(name):
+def outer_network(name, output_nodes):
 
     input_shape = (None, 1)
     # input_shape = (None, inp.shape)
-    network, input_var = create_neural_network(None, name=name, input_shape=input_shape, output_nodes=3,
+    network, input_var = create_neural_network(None, name=name, input_shape=input_shape, output_nodes=output_nodes,
                                     inner_transfer_function=lasagne.nonlinearities.tanh,
                                     outer_transfer_function=lasagne.nonlinearities.linear)
 

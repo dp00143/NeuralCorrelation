@@ -1,6 +1,8 @@
-import numpy as np
+import os
+os.environ['THEANO_FLAGS'] = 'exception_verbosity=high,optimizer=fast_compile'
 import theano
 import theano.tensor as T
+from theano.compile.nanguardmode import NanGuardMode
 import time
 
 from networks import double_barreled_network, outer_network
@@ -24,12 +26,15 @@ def train_double_barreled_network(x_inputs, y_inputs, num_epochs, input_shape=(N
     y_params = lasagne.layers.get_all_params(y_network)
     x_y_params = x_params + y_params
 
-    updates = lasagne.updates.nesterov_momentum(cost, x_y_params, learning_rate=0.1)
+    updates = lasagne.updates.nesterov_momentum(cost, x_y_params, learning_rate=0.1/16)
 
 
     # train_fn = theano.function([x_input, y_input, u, v], cost, updates=updates)
 
     train_fn = theano.function([x_input, y_input], cost, updates=updates)
+                               # ,
+                               # mode=NanGuardMode(nan_is_error=True, inf_is_error=True,
+                               #                                               big_is_error=True))
 
     print 'Start training double barreled network'
 
@@ -38,15 +43,17 @@ def train_double_barreled_network(x_inputs, y_inputs, num_epochs, input_shape=(N
         train_err = 0
         train_batches = 0
         start_time = time.time()
-        curr_err = train_fn(x_inputs, y_inputs)
-        train_err += curr_err
-        train_batches += 1
+        batchsize = 500
+        for start_idx in range(0, len(x_inputs) - batchsize + 1, batchsize):
+            curr_err = train_fn(x_inputs[start_idx:start_idx+batchsize], y_inputs[start_idx:start_idx+batchsize])
+            train_err += curr_err
+            train_batches += 1
 
         training_loss = train_err / train_batches
         # Then we print the results for this epoch:
         print("Epoch {} of {} took {:.3f}s".format(
             epoch + 1, num_epochs, time.time() - start_time))
-        print("  training loss:\t\t{:.20f}".format(train_err / train_batches))
+        print("  training loss:\t\t{:.20f}".format(training_loss))
 
     return u, v, x_input, y_input, training_loss
 
@@ -54,9 +61,9 @@ def train_double_barreled_network(x_inputs, y_inputs, num_epochs, input_shape=(N
 def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
                          target_var_x=T.tensor3('x_target'), target_var_y=T.tensor3('y_target')):
 
-    x_out, x_shape, u_network, input_var_u = outer_network(name='u_network')
-    y_out, y_shape, v_network, input_var_v = outer_network(name='v_network')
-
+    x_out, x_shape, u_network, input_var_u = outer_network(name='u_network', output_nodes=3)
+    y_out, y_shape, v_network, input_var_v = outer_network(name='v_network', output_nodes=3)
+    batchsize = 500
 
     #Training function that is used to optimize the network
     try:
@@ -66,8 +73,8 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
         y_inputs = numpy.array(y_inputs)
         x_out_shape = x_inputs.shape
 
-    cost_u = lasagne.objectives.squared_error(x_out, target_var_x.reshape((x_out_shape[1], x_out_shape[0], x_out_shape[2]))).mean()
-    cost_v = lasagne.objectives.squared_error(y_out, target_var_y.reshape((x_out_shape[1], x_out_shape[0], x_out_shape[2]))).mean()
+    cost_u = lasagne.objectives.squared_error(x_out, target_var_x.reshape((x_out_shape[1], batchsize, x_out_shape[2]))).mean()
+    cost_v = lasagne.objectives.squared_error(y_out, target_var_y.reshape((x_out_shape[1], batchsize, x_out_shape[2]))).mean()
 
     params_u = lasagne.layers.get_all_params(u_network)
     params_v = lasagne.layers.get_all_params(v_network)
@@ -104,11 +111,13 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
         train_err_v = 0
         train_batches = 0
         start_time = time.time()
-        u_eval = u.eval({x_input: x_inputs})
-        v_eval = v.eval({y_input: y_inputs})
-        train_err_u += train_fn_u(u_eval, x_inputs)
-        train_err_v += train_fn_v(v_eval, y_inputs)
-        train_batches += 1
+
+        for start_idx in range(0, len(x_inputs) - batchsize + 1, batchsize):
+            u_eval = u.eval({x_input: x_inputs[start_idx:start_idx + batchsize]})
+            v_eval = v.eval({y_input: y_inputs[start_idx:start_idx + batchsize]})
+            train_err_u += train_fn_u(u_eval, x_inputs[start_idx:start_idx + batchsize])
+            train_err_v += train_fn_v(v_eval, y_inputs[start_idx:start_idx + batchsize])
+            train_batches += 1
 
         # And a full pass over the validation data:
         # val_err_u = 0
