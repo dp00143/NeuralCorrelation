@@ -25,3 +25,6 @@ def minus_corr_with_constraints(u, v):
 
     res = neg_corr + (avg_u)**2 + (avg_v)**2 + ((T.sqrt(avg_squared_u)-1))**2+((T.sqrt(avg_squared_v)-1))**2
     return res
+
+def mse_target_var(a, b):
+    return (a[-2] - b[0][-2])**2

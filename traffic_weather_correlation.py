@@ -10,7 +10,8 @@ window_duration = timedelta(hours=1)
 
 
 def setup():
-    datapath = os.path.join(os.path.expanduser('~'), 'PycharmProjects', 'CSV2DataStream', 'Analysis')
+    git = True
+    datapath= os.path.join(os.path.expanduser('~'), 'PycharmProjects', 'CSV2DataStream', 'Analysis')
     main_path = os.path.join(datapath, 'traffic')
     context_path = os.path.join(datapath, 'weather')
 

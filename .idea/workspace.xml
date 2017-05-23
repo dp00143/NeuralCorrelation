@@ -2,113 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="019d40c0-0285-4c52-b347-a9ec0ed75f89" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185025.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185051.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185078.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185104.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185131.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185157.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185184.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185210.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185237.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185263.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185290.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185316.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185343.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185369.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185396.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData185422.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData186953.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData186979.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187006.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187032.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187059.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187085.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187112.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187138.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187165.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187191.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187218.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187244.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187271.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187297.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187324.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187350.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187377.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187403.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187430.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187456.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187483.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187509.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187536.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187562.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187589.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187615.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187642.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187668.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187695.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187721.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187748.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187774.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData187801.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/exemptforfastertesting/trafficData198330.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/single traffic/trafficData187430.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData180926.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData180952.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData180980.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181006.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181034.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181060.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181088.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181114.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181142.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181168.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181197.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181223.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181251.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181277.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181305.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData181331.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182657.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182683.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182712.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182738.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182766.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182792.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182820.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182846.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182875.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182901.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182929.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182955.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182983.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData183009.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData183037.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData183063.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData183091.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData183117.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184595.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184621.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184649.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184675.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184703.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184729.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184758.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184784.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184813.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184839.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184866.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184892.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184919.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184945.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184972.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData184998.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/weather/weatherDataOctoberSeptemberClean.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/dataPandas.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/traffic_weather_correlation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/umu/UMU_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/umu/competitionLagged_dataset.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/med_data_correlation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSV2DataStream" afterPath="$PROJECT_DIR$/CSV2DataStream" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CSV2DataStream/.idea/CSV2DataStream.iml" afterPath="$PROJECT_DIR$/../CSV2DataStream/.idea/CSV2DataStream.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CSV2DataStream/.idea/misc.xml" afterPath="$PROJECT_DIR$/../CSV2DataStream/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CSV2DataStream/.idea/modules.xml" afterPath="$PROJECT_DIR$/../CSV2DataStream/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CSV2DataStream/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../CSV2DataStream/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182766.csv" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182766.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182875.csv" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182875.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182929.csv" afterPath="$PROJECT_DIR$/../CSV2DataStream/Analysis/traffic/trafficData182929.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../CSV2DataStream/dataPandas.py" afterPath="$PROJECT_DIR$/../CSV2DataStream/dataPandas.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/NeuralCorrelation.iml" afterPath="$PROJECT_DIR$/.idea/NeuralCorrelation.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.py" afterPath="$PROJECT_DIR$/functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/network_training.py" afterPath="$PROJECT_DIR$/network_training.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/networks.py" afterPath="$PROJECT_DIR$/networks.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/traffic_weather_correlation.py" afterPath="$PROJECT_DIR$/traffic_weather_correlation.py" />
     </list>
     <ignored path="NeuralCorrelation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -121,14 +32,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/NeuralCorrelation$mnist__1_.coverage" NAME="mnist (1) Coverage Results" MODIFIED="1473096748917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../MNIST" />
+    <SUITE FILE_PATH="coverage/NeuralCorrelation$dataPandas.coverage" NAME="dataPandas Coverage Results" MODIFIED="1487774277032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../CSV2DataStream" />
+    <SUITE FILE_PATH="coverage/NeuralCorrelation$traffic_weather_correlation.coverage" NAME="traffic_weather_correlation Coverage Results" MODIFIED="1495030934773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NeuralCorrelation$mnist.coverage" NAME="mnist Coverage Results" MODIFIED="1472142980047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NeuralCorrelation$maxEl.coverage" NAME="maxEl Coverage Results" MODIFIED="1476112152468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../HR" />
+    <SUITE FILE_PATH="coverage/NeuralCorrelation$mnist__1_.coverage" NAME="mnist (1) Coverage Results" MODIFIED="1473096748917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../MNIST" />
     <SUITE FILE_PATH="coverage/NeuralCorrelation$correlation_analysis.coverage" NAME="correlation_analysis Coverage Results" MODIFIED="1476285299590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NeuralCorrelation$similarity.coverage" NAME="similarity Coverage Results" MODIFIED="1473763661141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NeuralCorrelation$correlation_analysis_DEPRECATED.coverage" NAME="correlation_analysis_DEPRECATED Coverage Results" MODIFIED="1473078226685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NeuralCorrelation$data_generator.coverage" NAME="data_generator Coverage Results" MODIFIED="1473094826349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NeuralCorrelation$med_data_correlation.coverage" NAME="med_data_correlation Coverage Results" MODIFIED="1495367676582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NeuralCorrelation$similarity.coverage" NAME="similarity Coverage Results" MODIFIED="1473763661141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NeuralCorrelation$single_network_training.coverage" NAME="single_network_training Coverage Results" MODIFIED="1473177033021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NeuralCorrelation$correlation_analysis_DEPRECATED.coverage" NAME="correlation_analysis_DEPRECATED Coverage Results" MODIFIED="1473078226685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NeuralCorrelation$maxEl.coverage" NAME="maxEl Coverage Results" MODIFIED="1476112152468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../HR" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -138,64 +52,174 @@
     <favorites_list name="NeuralCorrelation" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_generator.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="network_training.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network_training.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="traffic_weather_correlation.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/traffic_weather_correlation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dataPandas.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../CSV2DataStream/dataPandas.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1548">
-              <caret line="86" column="84" selection-start-line="86" selection-start-column="84" selection-end-line="86" selection-end-column="84" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample1.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../HR/sample1.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.9">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="traffic_weather_correlation.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/traffic_weather_correlation.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="660">
+                  <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#40#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="med_data_correlation.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/med_data_correlation.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="407">
+                  <caret line="45" column="64" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="64" />
+                  <folding>
+                    <element signature="e#0#13#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="functions.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/functions.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="375">
+                  <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Dat.T1.MaximumLikelihood.csv" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/NikosData/Dat.T1.MaximumLikelihood.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="825">
+                  <caret line="55" column="141" selection-start-line="55" selection-start-column="141" selection-end-line="55" selection-end-column="141" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="import_data.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CSV2DataStream/dataimport/import_data.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dataPandas.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CSV2DataStream/dataPandas.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="780">
+                  <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="61" selection-end-column="21" />
+                  <folding>
+                    <element signature="e#0#29#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Dat.T1.with.MissingFiles.corrected.csv" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/NikosData/Dat.T1.with.MissingFiles.corrected.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="219" selection-start-line="0" selection-start-column="213" selection-end-line="0" selection-end-column="219" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitmodules" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitmodules">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Dat.T2.MaximumLikelihood.csv" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/NikosData/Dat.T2.MaximumLikelihood.csv">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="223" selection-start-line="0" selection-start-column="223" selection-end-line="0" selection-end-column="223" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="network_training.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/network_training.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="458">
+                  <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+                  <folding>
+                    <marker date="1495367676000" expanded="true" signature="0:7" ph="import ..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="networks.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/networks.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="data_generator.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/data_generator.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="15">
+                  <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+            <entry file="file:///usr/local/lib/python2.7/site-packages/lasagne/layers/base.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="570">
+                  <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dense.py" pinned="false" current-in-tab="false">
+            <entry file="file:///usr/local/lib/python2.7/site-packages/lasagne/layers/dense.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="855">
+                  <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="objectives.py" pinned="false" current-in-tab="false">
+            <entry file="file:///usr/local/lib/python2.7/site-packages/lasagne/objectives.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1935">
+                  <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -214,9 +238,7 @@
         <option value="$PROJECT_DIR$/mnist.py" />
         <option value="$PROJECT_DIR$/correlation_analysis_DEPRECATED.py" />
         <option value="$PROJECT_DIR$/single_network_training.py" />
-        <option value="$PROJECT_DIR$/networks.py" />
         <option value="$PROJECT_DIR$/similarity.py" />
-        <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/data_generator.py" />
         <option value="$PROJECT_DIR$/correlation_analysis.py" />
         <option value="$PROJECT_DIR$/../HR/sample1.txt" />
@@ -227,6 +249,13 @@
         <option value="$PROJECT_DIR$/../DataImport/panda_wrapper.py" />
         <option value="$PROJECT_DIR$/../DataImport/dataPandas.py" />
         <option value="$PROJECT_DIR$/traffic_weather_correlation.py" />
+        <option value="$PROJECT_DIR$/CSV2DataStream/dataimport/import_data.py" />
+        <option value="$PROJECT_DIR$/../CSV2DataStream/dataPandas.py" />
+        <option value="$PROJECT_DIR$/CSV2DataStream/dataPandas.py" />
+        <option value="$PROJECT_DIR$/networks.py" />
+        <option value="$PROJECT_DIR$/functions.py" />
+        <option value="$PROJECT_DIR$/med_data_correlation.py" />
+        <option value="$PROJECT_DIR$/network_training.py" />
       </list>
     </option>
   </component>
@@ -237,10 +266,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1737" />
-    <option name="y" value="24" />
-    <option name="width" value="1623" />
-    <option name="height" value="1026" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="812" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -267,58 +295,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="NeuralCorrelation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralCorrelation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LDAPlusPlus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralCorrelation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MNIST" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralCorrelation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSV2DataStream" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NeuralCorrelation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CSV2DataStream" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Analysis" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -339,18 +323,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CSV2DataStream" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/../CSV2DataStream" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../CSV2DataStream/Analysis/umu" />
+      <recent name="$PROJECT_DIR$/CSV2DataStream/Analysis/umu" />
       <recent name="$PROJECT_DIR$/../DataImport" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.correlation_analysis">
+  <component name="RunManager" selected="Python.med_data_correlation">
     <configuration default="false" name="correlation_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -369,60 +356,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="mnist (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../MNIST" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MNIST" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../MNIST/mnist.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="similarity" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeuralCorrelation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/similarity.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="single_network_training" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="NeuralCorrelation" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/single_network_training.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="maxEl" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -437,6 +370,60 @@
       <module name="HR" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../HR/maxEl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="traffic_weather_correlation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NeuralCorrelation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/traffic_weather_correlation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="dataPandas" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../CSV2DataStream" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="CSV2DataStream" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../CSV2DataStream/dataPandas.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="med_data_correlation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="NeuralCorrelation" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/med_data_correlation.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -651,18 +638,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.correlation_analysis" />
-      <item index="1" class="java.lang.String" itemvalue="Python.mnist (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Python.similarity" />
-      <item index="3" class="java.lang.String" itemvalue="Python.single_network_training" />
-      <item index="4" class="java.lang.String" itemvalue="Python.maxEl" />
+      <item index="1" class="java.lang.String" itemvalue="Python.maxEl" />
+      <item index="2" class="java.lang.String" itemvalue="Python.traffic_weather_correlation" />
+      <item index="3" class="java.lang.String" itemvalue="Python.dataPandas" />
+      <item index="4" class="java.lang.String" itemvalue="Python.med_data_correlation" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.correlation_analysis" />
-        <item index="1" class="java.lang.String" itemvalue="Python.maxEl" />
-        <item index="2" class="java.lang.String" itemvalue="Python.similarity" />
-        <item index="3" class="java.lang.String" itemvalue="Python.single_network_training" />
-        <item index="4" class="java.lang.String" itemvalue="Python.mnist (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.med_data_correlation" />
+        <item index="1" class="java.lang.String" itemvalue="Python.traffic_weather_correlation" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dataPandas" />
+        <item index="3" class="java.lang.String" itemvalue="Python.correlation_analysis" />
+        <item index="4" class="java.lang.String" itemvalue="Python.maxEl" />
       </list>
     </recent_temporary>
   </component>
@@ -691,27 +678,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1737" y="24" width="1623" height="1026" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2526186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.065808296" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4553102" sideWeight="0.5021565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912722" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35120925" sideWeight="0.4978435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4090431" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.4978435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32275862" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -722,16 +709,16 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4553102" sideWeight="0.4978435" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46206897" sideWeight="0.4978435" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2526186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.102288984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32871014" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4090431" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40416667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -764,13 +751,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/network_training.py</url>
-          <line>204</line>
+          <line>251</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/../CSV2DataStream/dataPandas.py</url>
+          <line>155</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/network_training.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="66" />
+          <line>180</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/med_data_correlation.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/data_generator.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/data_generator.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -783,418 +790,236 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="69" />
+      <option name="time" value="88" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="u_eval" language="Python" />
-        <watch expression="v_eval" language="Python" />
-        <watch expression="curr_err" language="Python" />
-        <watch expression="train_err" language="Python" />
-        <watch expression="a[0] is '3'" language="Python" />
-        <watch expression="a[0]" language="Python" />
-        <watch expression="a[0] == '3'" language="Python" />
+        <watch expression="x_inputs" language="Python" />
+        <watch expression="x_inputs[0][0[-2]" language="Python" />
+        <watch expression="u_eval[-2]" language="Python" />
+        <watch expression="len(x_inputs)" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/lasagne/layers/helper.py" />
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/lasagne/layers/__init__.py" />
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/configdefaults.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1314">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/compile/pfunc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8586">
-          <caret line="489" column="0" selection-start-line="489" selection-start-column="0" selection-end-line="489" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/compile/function.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mnist.py" />
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/type.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/gof/graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="379" column="0" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/var.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="570" column="0" selection-start-line="570" selection-start-column="0" selection-end-line="570" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/layers/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/layers/input.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="939" column="0" selection-start-line="939" selection-start-column="0" selection-end-line="939" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/gof/link.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="324" column="0" selection-start-line="324" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/gof/op.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="907" column="0" selection-start-line="907" selection-start-column="0" selection-end-line="907" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/compile/function_module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="865" column="0" selection-start-line="865" selection-start-column="0" selection-end-line="865" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/gradient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="427" column="0" selection-start-line="427" selection-start-column="0" selection-end-line="427" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="226" column="4" selection-start-line="226" selection-start-column="4" selection-end-line="226" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/numpy/core/numeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="413" column="4" selection-start-line="413" selection-start-column="4" selection-end-line="413" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/nonlinearities.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="289" column="4" selection-start-line="289" selection-start-column="4" selection-end-line="289" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/numpy/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/layers/dense.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/objectives.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="145" column="36" selection-start-line="145" selection-start-column="36" selection-end-line="145" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/updates.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="296" column="4" selection-start-line="296" selection-start-column="4" selection-end-line="296" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/matplotlib/pyplot.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/numpy/core/numeric.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/nonlinearities.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python2.7/site-packages/numpy/__init__.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/layers/dense.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/objectives.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/updates.py" />
     <entry file="file:///usr/lib/python2.7/random.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="573" column="9" selection-start-line="573" selection-start-column="9" selection-end-line="573" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/networks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="36" column="89" selection-start-line="36" selection-start-column="89" selection-end-line="36" selection-end-column="89" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-            <marker date="1473178759531" expanded="true" signature="746:815" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../MNIST/mnist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="269" column="33" selection-start-line="269" selection-start-column="33" selection-end-line="269" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/scipy/spatial/distance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="403" column="4" selection-start-line="403" selection-start-column="4" selection-end-line="403" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/nnet/nnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-183">
-          <caret line="2032" column="4" selection-start-line="2032" selection-start-column="4" selection-end-line="2032" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-403">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2016.2/system/python_stubs/-1247972723/numpy/core/umath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/basic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-356">
-          <caret line="5419" column="6" selection-start-line="5419" selection-start-column="6" selection-end-line="5419" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/lasagne/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/../MNIST/mnist.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/scipy/spatial/distance.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/nnet/nnet.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/__init__.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2016.2/system/python_stubs/-1247972723/numpy/core/umath.py" />
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/theano/tensor/basic.py" />
     <entry file="file://$PROJECT_DIR$/similarity.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
           <caret line="2008" column="10" selection-start-line="2008" selection-start-column="10" selection-end-line="2008" selection-end-column="10" />
-          <folding>
-            <element signature="e#37522#37534#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python2.7/dist-packages/scipy/stats/stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="3004" column="13" selection-start-line="3004" selection-start-column="13" selection-end-line="3004" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <marker date="1473768026958" expanded="true" signature="145:361" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../HR/newYearChaos.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../HR/sample1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../HR/maxEl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../HR/applesOranges.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../HR/happyLadybugs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DataImport/date_util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DataImport/onlineWeatherDataImport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DataImport/simpleTrafficImporter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1069">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../DataImport/panda_wrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/gdrive/Surrey/LDAPlusPlus/CONSTANTS.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/correlation_analysis_DEPRECATED.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1717">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single_network_training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="182" column="31" selection-start-line="182" selection-start-column="31" selection-end-line="182" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/network_training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/scipy/stats/stats.py" />
+    <entry file="file://$PROJECT_DIR$/../HR/newYearChaos.py" />
+    <entry file="file://$PROJECT_DIR$/../HR/sample1.txt" />
+    <entry file="file://$PROJECT_DIR$/../HR/maxEl.py" />
+    <entry file="file://$PROJECT_DIR$/../HR/applesOranges.py" />
+    <entry file="file://$PROJECT_DIR$/../HR/happyLadybugs.py" />
+    <entry file="file://$PROJECT_DIR$/../DataImport/date_util.py" />
+    <entry file="file://$PROJECT_DIR$/../DataImport/onlineWeatherDataImport.py" />
+    <entry file="file://$PROJECT_DIR$/../DataImport/simpleTrafficImporter.py" />
+    <entry file="file://$PROJECT_DIR$/../DataImport/panda_wrapper.py" />
+    <entry file="file://$USER_HOME$/gdrive/Surrey/LDAPlusPlus/CONSTANTS.py" />
+    <entry file="file://$PROJECT_DIR$/correlation_analysis_DEPRECATED.py" />
+    <entry file="file://$PROJECT_DIR$/single_network_training.py" />
+    <entry file="file://$PROJECT_DIR$/../CSV2DataStream/Analysis/umu/competitionLagged_dataset.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../CSV2DataStream/dataPandas.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1548">
-          <caret line="86" column="84" selection-start-line="86" selection-start-column="84" selection-end-line="86" selection-end-column="84" />
+        <state relative-caret-position="2325">
+          <caret line="155" column="25" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#29#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NikosData/Dat.T1.Multiple Imputation.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-13395">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NikosData/Dat.T2.with.MissingFiles.corrected.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitmodules">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NikosData/Dat.T2.Multiple Imputation.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19110">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/lasagne/layers/dense.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/lasagne/layers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/traffic_weather_correlation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSV2DataStream/dataPandas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="61" selection-end-column="21" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/traffic_weather_correlation.py">
+    <entry file="file://$PROJECT_DIR$/NikosData/Dat.T2.MaximumLikelihood.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="223" selection-start-line="0" selection-start-column="223" selection-end-line="0" selection-end-column="223" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSV2DataStream/dataimport/import_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NikosData/Dat.T1.with.MissingFiles.corrected.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="219" selection-start-line="0" selection-start-column="213" selection-end-line="0" selection-end-column="219" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/lasagne/objectives.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/networks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NikosData/Dat.T1.MaximumLikelihood.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="141" selection-start-line="55" selection-start-column="141" selection-end-line="55" selection-end-column="141" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/theano/compile/function_module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="688" column="0" selection-start-line="688" selection-start-column="0" selection-end-line="688" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/theano/tensor/basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1635" column="14" selection-start-line="1635" selection-start-column="14" selection-end-line="1635" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network_training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="118" column="23" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
+          <folding>
+            <marker date="1495367676000" expanded="true" signature="0:7" ph="import ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/med_data_correlation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="45" column="64" selection-start-line="45" selection-start-column="56" selection-end-line="45" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
