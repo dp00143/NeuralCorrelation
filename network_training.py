@@ -66,11 +66,11 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
 
     #Training function that is used to optimize the network
     try:
-        x_out_shape = x_inputs.shape
+        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], 1)
     except:
         x_inputs = numpy.array(x_inputs)
         y_inputs = numpy.array(y_inputs)
-        x_out_shape = x_inputs.shape
+        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], 1)
 
     cost_u = lasagne.objectives.squared_error(x_out, target_var_x.reshape((x_out_shape[1], batchsize, x_out_shape[2]))).mean()
     cost_v = lasagne.objectives.squared_error(y_out, target_var_y.reshape((x_out_shape[1], batchsize, x_out_shape[2]))).mean()
@@ -78,8 +78,8 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
     params_u = lasagne.layers.get_all_params(u_network)
     params_v = lasagne.layers.get_all_params(v_network)
 
-    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=0.1)
-    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=0.1)
+    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=0.00001)
+    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=0.00001)
 
     train_fn_u = theano.function([input_var_u, target_var_x], cost_u, updates=updates_u)
     train_fn_v = theano.function([input_var_v, target_var_y], cost_v, updates=updates_v)
@@ -126,10 +126,18 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
                                                                             x_inputs[:-val_data_length],
                                                                             y_inputs[:-val_data_length],
                                                                             batchsize, shuffle=True):
+            lfaatx = [[[xds[0][-2]] for xds in xd]]
+            lfaaty = [[[yds[0][-2]] for yds in xd]]
             u_eval = u.eval({x_input: xd})
             v_eval = u_eval * (-corr_coefficient)
-            train_err_u += train_fn_u(u_eval, xd)
-            train_err_v += train_fn_v(v_eval, yd)
+
+            cur_pred = x_out.eval({input_var_u:u_eval})
+            err = 0
+            for cp, lf in zip(cur_pred, lfaatx[0]):
+                err += (cp - lf)**2
+            err = err/len(cur_pred)
+            train_err_u += train_fn_u(u_eval, lfaatx)
+            train_err_v += train_fn_v(v_eval, lfaaty)
             train_batches += 1
 
         # And a full pass over the validation data:
@@ -139,6 +147,7 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
         # val_acc_v = 0
         # val_batches = 0
         # for start_idx in range(batchsize, len(x_inputs) - batchsize + 1, batchsize):
+
         u_eval = u.eval({x_input: x_inputs[-val_data_length:]})
         # u_eval = u.eval({x_input: x_inputs})
 
@@ -146,8 +155,10 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
         v_eval = u_eval * (-corr_coefficient)
         # val_err_u = val_fn_u(u_eval, x_inputs)
         # val_err_v = val_fn_v(v_eval, y_inputs)
-        val_err_u = val_fn_u(u_eval, x_inputs[-val_data_length:])
-        val_err_v = val_fn_v(v_eval, y_inputs[-val_data_length:])
+        val_x =  [[[xds[0][-2]] for xds in x_inputs[-val_data_length:]]]
+        val_y =  [[[yds[0][-2]] for yds in y_inputs[-val_data_length:]]]
+        val_err_u = val_fn_u(u_eval, val_x)
+        val_err_v = val_fn_v(v_eval, val_y)
         # val_err_u += tmp_cost_u
         # val_err_v += tmp_cost_v
         # val_acc_u += tmp_acc_u
@@ -163,7 +174,7 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
         count = 0
         targets = y_inputs[-val_data_length:]
         for y_pred, target in zip(y_predictions, targets):
-            squared_err += (y_pred[-2] - target[0][-2]) ** 2
+            squared_err += (y_pred - target[0][0]) ** 2
             # print "Current MSE:"
             # print (y_pred[-2] - target[0][-2]) ** 2
             count += 1

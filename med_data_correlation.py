@@ -35,15 +35,17 @@ def train(num_epochs=100, ensemble_num=20, inner_width=100, outer_width=100):
             if tmp[4] < min_cost:
                 u, v, x_input, y_input, min_cost = tmp
 
+    # out_nodes = columns
+    out_nodes = 1
     squared_err = None
     for i in range(ensemble_num):
         if squared_err is None:
             loss_u, loss_v, squared_err = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
                                                                corr_coefficient=min_cost,  network_width=outer_width,
-                                                               out_nodes=columns)
+                                                               out_nodes=out_nodes)
         else:
             tmp = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
-                                       corr_coefficient=min_cost,  network_width=outer_width, out_nodes=columns)
+                                       corr_coefficient=min_cost,  network_width=outer_width, out_nodes=out_nodes)
             if tmp[2] < squared_err:
                 loss_u, loss_v, squared_err = tmp
 
@@ -51,20 +53,20 @@ def train(num_epochs=100, ensemble_num=20, inner_width=100, outer_width=100):
 
     print '#####################'
     print 'Correlation'
-    pprint(min_cost)
+    pprint(float(min_cost))
     #
     print '#####################'
     print 'MSE u'
-    pprint(loss_u)
+    pprint(float(loss_u))
 
     print '#####################'
     print 'MSE v'
-    pprint(loss_v)
+    pprint(float(loss_v))
 
 
     print '#####################'
     print 'MSE Target Variable (lfaat1)'
-    pprint(squared_err)
+    pprint(float(squared_err))
 
 if __name__ == '__main__':
-    train(num_epochs=100, ensemble_num=200, outer_width=150)
+    train(num_epochs=100, ensemble_num=20, outer_width=150)
