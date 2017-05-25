@@ -127,7 +127,7 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
                                                                             y_inputs[:-val_data_length],
                                                                             batchsize, shuffle=True):
             lfaatx = [[[xds[0][-2]] for xds in xd]]
-            lfaaty = [[[yds[0][-2]] for yds in xd]]
+            lfaaty = [[[yds[0][-2]] for yds in yd]]
             u_eval = u.eval({x_input: xd})
             v_eval = u_eval * (-corr_coefficient)
 
