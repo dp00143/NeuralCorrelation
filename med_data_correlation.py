@@ -2,7 +2,7 @@ import pandas
 from pprint import pprint
 import numpy
 import theano
-from network_training import train_double_barreled_network, train_outer_networks
+from network_training import train_double_barreled_network, train_outer_networks, train_outer_networks_kfold
 
 
 def read_data():
@@ -69,4 +69,4 @@ def train(num_epochs=100, ensemble_num=20, inner_width=100, outer_width=100):
     pprint(float(squared_err))
 
 if __name__ == '__main__':
-    train(num_epochs=100, ensemble_num=20, outer_width=150)
+    train(num_epochs=100, ensemble_num=1, outer_width=150)
