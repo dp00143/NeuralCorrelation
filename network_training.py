@@ -226,8 +226,8 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
     params_u = lasagne.layers.get_all_params(u_network)
     params_v = lasagne.layers.get_all_params(v_network)
 
-    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=0.0000001)
-    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=0.0000001)
+    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=0.00001)
+    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=0.00001)
 
     train_fn_u = theano.function([input_var_u, target_var_x], cost_u, updates=updates_u)
     train_fn_v = theano.function([input_var_v, target_var_y], cost_v, updates=updates_v)
@@ -316,7 +316,7 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
         targets = y_inputs[-val_data_length:]
         for y_pred, target in zip(y_predictions, targets):
             squared_err += (y_pred - target[0][0]) ** 2
-        squared_err = squared_err / len(y_pred)
+        squared_err = squared_err / len(y_predictions)
 
         loss_u = train_err_u / train_batches
         loss_v = train_err_v / train_batches

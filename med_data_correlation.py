@@ -40,11 +40,11 @@ def train(num_epochs=100, ensemble_num=20, inner_width=100, outer_width=100):
     squared_err = None
     for i in range(ensemble_num):
         if squared_err is None:
-            loss_u, loss_v, squared_err = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
+            loss_u, loss_v, squared_err = train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
                                                                corr_coefficient=min_cost,  network_width=outer_width,
                                                                out_nodes=out_nodes)
         else:
-            tmp = train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
+            tmp = train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
                                        corr_coefficient=min_cost,  network_width=outer_width, out_nodes=out_nodes)
             if tmp[2] < squared_err:
                 loss_u, loss_v, squared_err = tmp
@@ -69,4 +69,4 @@ def train(num_epochs=100, ensemble_num=20, inner_width=100, outer_width=100):
     pprint(float(squared_err))
 
 if __name__ == '__main__':
-    train(num_epochs=100, ensemble_num=1, outer_width=150)
+    train(num_epochs=50, ensemble_num=20, outer_width=150)
