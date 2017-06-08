@@ -8,8 +8,8 @@ from network_training import train_double_barreled_network, train_outer_networks
 def read_data():
     # to_drop = ['ptid','p2','ethnicgene','partnered','p4','p10','income4grp','p25a','p25d','scqtot13t1','nummetsites','canctype','numpriortx','ex1t1','CycleLen','age','p8','bmi','kpst1','yearsfromdxtostart','HGB1']
     to_drop = ['ptid']
-    phase1 = pandas.read_csv("NikosData/Dat.T1.MaximumLikelihood.csv").drop(to_drop, axis=1)
-    phase2 = transform_time_window_for_neural_network_input(pandas.read_csv("NikosData/Dat.T2.MaximumLikelihood.csv").drop(to_drop, axis=1))
+    phase1 = pandas.read_csv("NikosData/Dat.T1.MaximumLikelihood.v2.csv").drop(to_drop, axis=1)
+    phase2 = transform_time_window_for_neural_network_input(pandas.read_csv("NikosData/Dat.T2.MaximumLikelihood.v2.csv").drop(to_drop, axis=1))
     columns = len(phase1.columns)
     phase1 = transform_time_window_for_neural_network_input(phase1)
     return phase1, phase2, columns
@@ -36,7 +36,8 @@ def train(num_epochs=100, ensemble_num=20, inner_width=100, outer_width=100):
                 u, v, x_input, y_input, min_cost = tmp
 
     # out_nodes = columns
-    out_nodes = 1
+    # num_epochs = 10000
+    out_nodes = 7
     squared_err = None
     for i in range(ensemble_num):
         if squared_err is None:
@@ -64,9 +65,15 @@ def train(num_epochs=100, ensemble_num=20, inner_width=100, outer_width=100):
     pprint(float(loss_v))
 
 
-    print '#####################'
-    print 'MSE Target Variable (lfaat1)'
-    pprint(float(squared_err))
+    # print '#####################'
+    # print 'MSE Target Variables total'
+    # pprint(float(squared_err))
 
+
+    print '#####################'
+    # print 'MSE Target Variables mean'
+    # pprint(float(squared_err)/out_nodes)
+    for i, se in enumerate(squared_err):
+        print("  validation loss on target variable %i: %f" % (i, float(se)))
 if __name__ == '__main__':
-    train(num_epochs=50, ensemble_num=20, outer_width=150)
+    train(num_epochs=100, ensemble_num=1, outer_width=100)

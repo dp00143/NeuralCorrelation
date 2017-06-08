@@ -79,8 +79,9 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
     params_u = lasagne.layers.get_all_params(u_network)
     params_v = lasagne.layers.get_all_params(v_network)
 
-    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=0.00001)
-    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=0.00001)
+    learning_rate = 0.1/32
+    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=learning_rate)
+    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=learning_rate)
 
     train_fn_u = theano.function([input_var_u, target_var_x], cost_u, updates=updates_u)
     train_fn_v = theano.function([input_var_v, target_var_y], cost_v, updates=updates_v)
@@ -127,8 +128,8 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
                                                                             x_inputs[:-val_data_length],
                                                                             y_inputs[:-val_data_length],
                                                                             batchsize, shuffle=True):
-            lfaatx = [[[xds[0][-2]] for xds in xd]]
-            lfaaty = [[[yds[0][-2]] for yds in yd]]
+            lfaatx = [[xds[0][-2] for xds in xd]]
+            lfaaty = [[yds[0][-2] for yds in yd]]
             u_eval = u.eval({x_input: xd})
             v_eval = u_eval * (-corr_coefficient)
 
@@ -156,8 +157,8 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
         v_eval = u_eval * (-corr_coefficient)
         # val_err_u = val_fn_u(u_eval, x_inputs)
         # val_err_v = val_fn_v(v_eval, y_inputs)
-        val_x =  [[[xds[0][-2]] for xds in x_inputs[-val_data_length:]]]
-        val_y =  [[[yds[0][-2]] for yds in y_inputs[-val_data_length:]]]
+        val_x =  [[xds[0][-2]] for xds in x_inputs[-val_data_length:]]
+        val_y =  [[yds[0][-2]] for yds in y_inputs[-val_data_length:]]
         val_err_u = val_fn_u(u_eval, val_x)
         val_err_v = val_fn_v(v_eval, val_y)
         # val_err_u += tmp_cost_u
@@ -212,11 +213,11 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
     train_data_length = 900
     # Training function that is used to optimize the network
     try:
-        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], 1)
+        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], 7)
     except:
         x_inputs = numpy.array(x_inputs)
         y_inputs = numpy.array(y_inputs)
-        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], 1)
+        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], 7)
 
     cost_u = lasagne.objectives.squared_error(x_out,
                                               target_var_x.reshape((x_out_shape[1], train_data_length, x_out_shape[2]))).mean()
@@ -226,8 +227,9 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
     params_u = lasagne.layers.get_all_params(u_network)
     params_v = lasagne.layers.get_all_params(v_network)
 
-    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=0.00001)
-    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=0.00001)
+    learning_rate = 0.1/16
+    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=learning_rate)
+    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=learning_rate)
 
     train_fn_u = theano.function([input_var_u, target_var_x], cost_u, updates=updates_u)
     train_fn_v = theano.function([input_var_v, target_var_y], cost_v, updates=updates_v)
@@ -274,8 +276,8 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
             yd_train = y_inputs[train_index]
             xd_test = x_inputs[test_index]
             yd_test = y_inputs[test_index]
-            lfaatx = [[[xds[0][-2]] for xds in xd_train]]
-            lfaaty = [[[yds[0][-2]] for yds in yd_train]]
+            lfaatx = [[xds[0][-8:-1] for xds in xd_train]]
+            lfaaty = [[yds[0][-8:-1] for yds in yd_train]]
             u_eval = u.eval({x_input: xd_train})
             v_eval = u_eval * (-corr_coefficient)
             train_err_u += train_fn_u(u_eval, lfaatx)
@@ -297,8 +299,8 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
         v_eval = u_eval * (-corr_coefficient)
         # val_err_u = val_fn_u(u_eval, x_inputs)
         # val_err_v = val_fn_v(v_eval, y_inputs)
-        val_x = [[[xds[0][-2]] for xds in x_inputs[-val_data_length:]]]
-        val_y = [[[yds[0][-2]] for yds in y_inputs[-val_data_length:]]]
+        val_x = [[xds[0][-8:-1]] for xds in x_inputs[-val_data_length:]]
+        val_y = [[yds[0][-8:-1]] for yds in y_inputs[-val_data_length:]]
         val_err_u = val_fn_u(u_eval, val_x)
         val_err_v = val_fn_v(v_eval, val_y)
         # val_err_u += tmp_cost_u
@@ -312,11 +314,12 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
         x_predictions = x_out.eval({input_var_u: u_eval})
         y_predictions = y_out.eval({input_var_v: v_eval})
 
-        squared_err = 0
+        squared_err = [0 for _ in range(7)]
         targets = y_inputs[-val_data_length:]
         for y_pred, target in zip(y_predictions, targets):
-            squared_err += (y_pred - target[0][0]) ** 2
-        squared_err = squared_err / len(y_predictions)
+            for yp, t, i in zip(y_pred, target[0][-8:-1], range(7)):
+                squared_err[i] += (yp-t) ** 2
+        squared_err = [se / len(y_predictions) for se in squared_err]
 
         loss_u = train_err_u / train_batches
         loss_v = train_err_v / train_batches
@@ -333,7 +336,9 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
         # print("  validation accuracy v:\t\t{:.2f} %".format(
         #       float(val_acc_v)))
 
-        print("  validation loss on target variable:\t\t{:.6f}".format(float(squared_err)))
+        # print("  validation loss on target variable:\t\t{:.6f}".format(float(squared_err)))
+        for i, se in enumerate(squared_err):
+            print("  validation loss on target variable %i: %f" % (i,float(se)))
 
     return val_err_u, val_err_v, squared_err
 
