@@ -175,7 +175,7 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
         count = 0
         targets = y_inputs[-val_data_length:]
         for y_pred, target in zip(y_predictions, targets):
-            squared_err += (y_pred - target[0][0]) ** 2
+            squared_err += (y_pred - target[0][-2]) ** 2
             # print "Current MSE:"
             # print (y_pred[-2] - target[0][-2]) ** 2
             count += 1
@@ -315,7 +315,7 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
         squared_err = 0
         targets = y_inputs[-val_data_length:]
         for y_pred, target in zip(y_predictions, targets):
-            squared_err += (y_pred - target[0][0]) ** 2
+            squared_err += (y_pred - target[0][-2]) ** 2
         squared_err = squared_err / len(y_predictions)
 
         loss_u = train_err_u / train_batches
