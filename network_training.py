@@ -203,11 +203,12 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
     return val_err_u, val_err_v, squared_err
 
 def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs, corr_coefficient, network_width,
-                         target_var_x=T.tensor3('x_target'), target_var_y=T.tensor3('y_target'), out_nodes=3, kfold=10):
+                         target_var_x=T.tensor3('x_target'), target_var_y=T.tensor3('y_target'), out_nodes=3, kfold=10,
+                               out_variable=-2, inner_function=lasagne.nonlinearities.tanh):
     x_out, x_shape, u_network, input_var_u = outer_network(name='u_network', output_nodes=out_nodes,
-                                                           width=network_width)
+                                                           width=network_width, inner_function=lasagne.nonlinearities.tanh)
     y_out, y_shape, v_network, input_var_v = outer_network(name='v_network', output_nodes=out_nodes,
-                                                           width=network_width)
+                                                           width=network_width, inner_function=lasagne.nonlinearities.tanh)
     val_data_length = 278
     train_data_length = 900
     # Training function that is used to optimize the network
@@ -225,9 +226,9 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
 
     params_u = lasagne.layers.get_all_params(u_network)
     params_v = lasagne.layers.get_all_params(v_network)
-
-    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=0.00001)
-    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=0.00001)
+    learning_rate=0.1/16
+    updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=learning_rate)
+    updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=learning_rate)
 
     train_fn_u = theano.function([input_var_u, target_var_x], cost_u, updates=updates_u)
     train_fn_v = theano.function([input_var_v, target_var_y], cost_v, updates=updates_v)
@@ -274,8 +275,8 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
             yd_train = y_inputs[train_index]
             xd_test = x_inputs[test_index]
             yd_test = y_inputs[test_index]
-            lfaatx = [[[xds[0][-2]] for xds in xd_train]]
-            lfaaty = [[[yds[0][-2]] for yds in yd_train]]
+            lfaatx = [[[xds[0][out_variable]] for xds in xd_train]]
+            lfaaty = [[[yds[0][out_variable]] for yds in yd_train]]
             u_eval = u.eval({x_input: xd_train})
             v_eval = u_eval * (-corr_coefficient)
             train_err_u += train_fn_u(u_eval, lfaatx)
@@ -297,8 +298,8 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
         v_eval = u_eval * (-corr_coefficient)
         # val_err_u = val_fn_u(u_eval, x_inputs)
         # val_err_v = val_fn_v(v_eval, y_inputs)
-        val_x = [[[xds[0][-2]] for xds in x_inputs[-val_data_length:]]]
-        val_y = [[[yds[0][-2]] for yds in y_inputs[-val_data_length:]]]
+        val_x = [[[xds[0][out_variable]] for xds in x_inputs[-val_data_length:]]]
+        val_y = [[[yds[0][out_variable]] for yds in y_inputs[-val_data_length:]]]
         val_err_u = val_fn_u(u_eval, val_x)
         val_err_v = val_fn_v(v_eval, val_y)
         # val_err_u += tmp_cost_u
@@ -315,9 +316,14 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
         squared_err = 0
         targets = y_inputs[-val_data_length:]
         for y_pred, target in zip(y_predictions, targets):
-            squared_err += (y_pred - target[0][0]) ** 2
+            # if y_pred[0]<0 or y_pred[0]>10 or target[0][out_variable]<0 or target[0][out_variable]>10 :
+            #     print "FUuuuuuu"
+            squared_err += (y_pred - target[0][out_variable]) ** 2
         squared_err = squared_err / len(y_predictions)
-
+        # if epoch == 99:
+        #     for y_pred, target in zip(y_predictions, targets):
+        #         print "Pred: %f // Actual: %f" % (y_pred, target[0][out_variable])
+            # pass
         loss_u = train_err_u / train_batches
         loss_v = train_err_v / train_batches
 
