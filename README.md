@@ -1,2 +1,2 @@
 # NeuralCorrelation
-Correlation Analysis on IoT Data Streams using Neural Networks
+In this branch we scale the data for medical correlation
