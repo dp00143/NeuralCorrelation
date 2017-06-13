@@ -1,2 +1,2 @@
 # NeuralCorrelation
-Correlation Analysis on IoT Data Streams using Neural Networks
+In this branch we don't scale the data and predict the variables individually.
