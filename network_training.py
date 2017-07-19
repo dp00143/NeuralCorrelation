@@ -13,6 +13,7 @@ import numpy
 from data_generator import generate_sample_data, iterate_minibatches
 
 import lasagne
+import scale_data
 
 
 def train_double_barreled_network(x_inputs, y_inputs, num_epochs, network_width, input_shape=(None, 1, 3), x_input=T.tensor3('x_input'), y_input=T.tensor3('y_input')):
@@ -79,7 +80,7 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
     params_u = lasagne.layers.get_all_params(u_network)
     params_v = lasagne.layers.get_all_params(v_network)
 
-    learning_rate = 0.1/32
+    learning_rate = 0.1/16
     updates_u = lasagne.updates.nesterov_momentum(cost_u, params_u, learning_rate=learning_rate)
     updates_v = lasagne.updates.nesterov_momentum(cost_v, params_v, learning_rate=learning_rate)
 
@@ -174,6 +175,7 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
 
         squared_err = 0
         count = 0
+
         targets = y_inputs[-val_data_length:]
         for y_pred, target in zip(y_predictions, targets):
             squared_err += (y_pred - target[0][0]) ** 2
@@ -181,6 +183,7 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
             # print (y_pred[-2] - target[0][-2]) ** 2
             count += 1
         squared_err = squared_err/count
+
 
             # val_batches += 1
 
@@ -204,20 +207,30 @@ def train_outer_networks(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs,
     return val_err_u, val_err_v, squared_err
 
 def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_epochs, corr_coefficient, network_width,
-                         target_var_x=T.tensor3('x_target'), target_var_y=T.tensor3('y_target'), out_nodes=3, kfold=10):
+                         target_var_x=T.tensor3('x_target'), target_var_y=T.tensor3('y_target'), kfold=10, ptids=None):
+    out_variables = [-9, -7, -6]
+    # out_variables = [-8, -6, -5]
+
+    out_nodes = len(out_variables)
     x_out, x_shape, u_network, input_var_u = outer_network(name='u_network', output_nodes=out_nodes,
                                                            width=network_width)
     y_out, y_shape, v_network, input_var_v = outer_network(name='v_network', output_nodes=out_nodes,
                                                            width=network_width)
-    val_data_length = 278
+    # val_data_length = 3932
+    # train_data_length = 9000
+    # val_data_length = 278
+    val_data_length = len(x_inputs)-1000
     train_data_length = 900
+    assert val_data_length + 100 + train_data_length == len(x_inputs)
+
+
     # Training function that is used to optimize the network
     try:
-        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], 7)
+        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], out_nodes)
     except:
         x_inputs = numpy.array(x_inputs)
         y_inputs = numpy.array(y_inputs)
-        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], 7)
+        x_out_shape = (x_inputs.shape[0], x_inputs.shape[1], out_nodes)
 
     cost_u = lasagne.objectives.squared_error(x_out,
                                               target_var_x.reshape((x_out_shape[1], train_data_length, x_out_shape[2]))).mean()
@@ -276,8 +289,12 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
             yd_train = y_inputs[train_index]
             xd_test = x_inputs[test_index]
             yd_test = y_inputs[test_index]
-            lfaatx = [[xds[0][-8:-1] for xds in xd_train]]
-            lfaaty = [[yds[0][-8:-1] for yds in yd_train]]
+            # lfaatx = [[xds[0][-8:-1] for xds in xd_train]]
+            # lfaaty = [[yds[0][-8:-1] for yds in yd_train]]
+            lfaatx = [[numpy.array([xds[0][out] for out in out_variables]) for xds in xd_train]]
+            lfaaty = [[numpy.array([yds[0][out] for out in out_variables]) for yds in yd_train]]
+            # lfaaty = [[yds[0][-8:-1] for yds in yd_train]]
+
             u_eval = u.eval({x_input: xd_train})
             v_eval = u_eval * (-corr_coefficient)
             train_err_u += train_fn_u(u_eval, lfaatx)
@@ -299,8 +316,8 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
         v_eval = u_eval * (-corr_coefficient)
         # val_err_u = val_fn_u(u_eval, x_inputs)
         # val_err_v = val_fn_v(v_eval, y_inputs)
-        val_x = [[xds[0][-8:-1]] for xds in x_inputs[-val_data_length:]]
-        val_y = [[yds[0][-8:-1]] for yds in y_inputs[-val_data_length:]]
+        val_x = [[numpy.array([xds[0][out] for out in out_variables])] for xds in x_inputs[-val_data_length:]]
+        val_y = [[numpy.array([yds[0][out] for out in out_variables])] for yds in y_inputs[-val_data_length:]]
         val_err_u = val_fn_u(u_eval, val_x)
         val_err_v = val_fn_v(v_eval, val_y)
         # val_err_u += tmp_cost_u
@@ -313,16 +330,66 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
 
         x_predictions = x_out.eval({input_var_u: u_eval})
         y_predictions = y_out.eval({input_var_v: v_eval})
-
-        squared_err = [0 for _ in range(7)]
+        if epoch == num_epochs - 1:
+            actual_file = open("actual_values.csv", 'a')
+            predicted_file = open("predicted_values.csv", 'a')
+            actual_file.write(
+                "ptid,p2,ethnicgene,partnered,p4,p10,income4grp,p25a,p25d,scqtot13t1,nummetsites,canctype,numpriortx,ex1t1,CycleLen,bpi1t2,age,p8,bmi,kpst1,yearsfromdxtostart,HGB1,gstott2,newafitott2,cesdtt2,satott2,lenat2,lenpt2,lfaat2,lfapt2\n")
+            predicted_file.write('gstott2,lenat2, lenpt2,newafitott2,cesdtt2,satott2\n')
+            scaled_actual_file = open("scaled_actual_values.csv", 'a')
+            scaled_predicted_file = open("scaled_predicted_values.csv", 'a')
+            scaled_actual_file.write("ptid,p2,ethnicgene,partnered,p4,p10,income4grp,p25a,p25d,scqtot13t1,nummetsites,canctype,numpriortx,ex1t1,CycleLen,bpi1t2,age,p8,bmi,kpst1,yearsfromdxtostart,HGB1,gstott2,newafitott2,cesdtt2,satott2,lenat2,lenpt2,lfaat2,lfapt2\n")
+            scaled_predicted_file.write('gstott2,lenat2, lenpt2,newafitott2,cesdtt2,satott2\n')
+        squared_err = [0 for _ in range(out_nodes)]
         targets = y_inputs[-val_data_length:]
-        for y_pred, target in zip(y_predictions, targets):
-            for yp, t, i in zip(y_pred, target[0][-8:-1], range(7)):
+        for y_pred, target, ptid in zip(y_predictions, targets, ptids):
+            target = numpy.array([target[0][out] for out in out_variables])
+            if epoch == num_epochs - 1:
+                scaled_actual_values = [str(ptid)]
+                scaled_actual_values.extend([str(t) for t in target])
+                # scaled_actual_file.seek(0)
+                scaled_actual_file.write(','.join(scaled_actual_values)+"\n")
+                # scaled_predicted_file.seek(0)
+                scaled_predicted_file.write(','.join([str(y) for y in y_pred]) + "\n")
+            for yp, t, i, ptid in zip(y_pred, target, range(out_nodes), ptids):
                 squared_err[i] += (yp-t) ** 2
         squared_err = [se / len(y_predictions) for se in squared_err]
 
+        back_scaled_err = [0 for _ in range(out_nodes)]
+        plot_yps = [[] for _ in out_variables]
+        plot_targets = [[] for _ in out_variables]
+        for y_pred, target, ptid in zip(y_predictions, targets, ptids):
+            tmp = list(target[0])
+            for out_variable, yp in zip(out_variables, y_pred):
+                tmp[out_variable] = yp
+            # tmp = numpy.array(tmp)
+            tmp = scale_data.inverse_scale_data(tmp)
+            y_pred = numpy.array([tmp[i] for i in out_variables])
+            target = scale_data.inverse_scale_data(target[0])
+            if epoch == num_epochs - 1:
+                actual_values = [str(ptid)]
+                actual_values.extend([str(t) for t in target])
+                actual_file.write(','.join(actual_values) + "\n")
+                predicted_file.write(','.join([str(y) for y in y_pred]) + "\n")
+                target = numpy.array([target[i] for i in out_variables])
+            for yp, t, i in zip(y_pred, target, range(out_nodes)):
+                back_scaled_err[i] += (yp - t) ** 2
+                if epoch == num_epochs - 1:
+                    plot_yps[i].append(yp)
+                    plot_targets[i].append(t)
+        if epoch == num_epochs-1:
+            from bland_altman import bland_altman_plot
+            for i in range(out_nodes):
+                bland_altman_plot(plot_yps[i], plot_targets[i], "feature%i.png" % i)
+            actual_file.close()
+            predicted_file.close()
+        back_scaled_err = [se / len(y_predictions) for se in back_scaled_err]
+
+
         loss_u = train_err_u / train_batches
         loss_v = train_err_v / train_batches
+
+
 
         # Then we print the results for this epoch:
         print("Epoch {} of {} took {:.3f}s".format(
@@ -340,7 +407,7 @@ def train_outer_networks_kfold(u, v, x_input, y_input, x_inputs, y_inputs, num_e
         for i, se in enumerate(squared_err):
             print("  validation loss on target variable %i: %f" % (i,float(se)))
 
-    return val_err_u, val_err_v, squared_err
+    return val_err_u, val_err_v, squared_err, back_scaled_err
 
 if __name__ == '__main__':
     theano.config.exception_verbosity='high'
